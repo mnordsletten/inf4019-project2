@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+cd /docker_distribute
+git pull origin master > /dev/null 2>&1
+
+cat /docker_distribute/output.txt | grep -q '^test1_status="PASS"'
+if [ $? -eq 0 ]; then
+        #echo 'test1_status="PASS"'
+	exit 0
+else
+        #echo 'test1_status="FAIL"'
+	exit 1
+fi
