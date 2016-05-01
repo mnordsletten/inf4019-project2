@@ -1,4 +1,4 @@
 version 0.1
 
 test1_status="FAIL"
-test2_status="PASS"
+test2_status="FAIL"
